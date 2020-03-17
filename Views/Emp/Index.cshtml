@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<h2>Index</h2>
+<p>@Html.ActionLink("Create new","Create","Emp")</p>
+@using (Html.BeginForm())
+{
+<table>
+    <tr>
+        <td>Empno</td>
+        <td>Ename</td>
+        <td>Job</td>
+        <td>Mgr</td>
+        <td>Hiredate</td>
+        <td>Sal</td>
+        <td>Comm</td>
+        <td>Deptno</td>
+    </tr>
+    @foreach (var e in Model)
+    {
+<tr>
+    <td>@e.EMPNO</td>
+    <td>@e.ENAME</td>
+    <td>@e.JOB</td>
+    <td>@e.MGR</td>
+    <td>@e.HIREDATE</td>
+    <td>@e.SAL</td>
+    <td>@e.COMM</td>
+    <td>@e.DEPTNO</td>
+    <td>
+        @Html.ActionLink("Edit Emp", "Edit", "Emp", new { id = e.EMPNO }, null)|
+
+        @Html.ActionLink("DeleteEmp", "Delete", "Emp", new { id = e.EMPNO }, null)|
+       
+    </td>
+</tr>
+    }
+</table>
+
+}
+

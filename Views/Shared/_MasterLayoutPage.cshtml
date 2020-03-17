@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Styles/Style1.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="Main">
+        <img src="~/Images/cog.jpg" class="img1"/>
+    </div>
+    <div class="div2">
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Login">Login</a></li>
+        </ul>
+    </div>
+    <div style="top:30%;position:absolute;">
+        @RenderBody()
+    </div>
+</body>
+</html>
